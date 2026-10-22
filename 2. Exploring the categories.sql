@@ -2,7 +2,7 @@
 
 SELECT 
 country,
-COUNT(*)
+COUNT(*) AS customer_count
 FROM project.dim_customers
 GROUP BY country
 
