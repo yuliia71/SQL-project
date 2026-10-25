@@ -1,29 +1,36 @@
 -- Calculating aggregated metrics. Identifying trends and spotting anomalies.
 
+-- Finding the Total Sales
 SELECT 
 SUM(sales_amount) AS total_sales
 FROM project.fact_sales
 
+-- Finding how many items are sold
 SELECT 
 SUM(quantity) AS total_quantity
 FROM project.fact_sales
 
+-- Find the average selling price
 SELECT
 AVG(price) AS avg_price
 FROM project.fact_sales
 
+-- Finding the Total number of Orders
 SELECT 
 COUNT(DISTINCT order_number) AS total_orders
 FROM project.fact_sales
 
+-- Finding the total number of products
 SELECT 
 COUNT(product_key) AS total_products
 FROM project.products
 
+-- Finding the total number of customers
 SELECT 
 COUNT( customer_key) AS total_customers
 FROM project.customers
 
+-- Finding the total number of customers that has placed an order
 SELECT
 COUNT(DISTINCT customer_key) AS total_customers_with_order
 FROM project.fact_sales
