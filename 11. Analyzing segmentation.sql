@@ -1,6 +1,7 @@
 --Grouping data into meaningful categories for targeted insights
 
 --Grouping products based on their cost
+WITH product_segments AS (
 SELECT
 product_key,
 product_name,
